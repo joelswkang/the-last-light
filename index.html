@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#172b2b" />
+    <meta name="description" content="The Last Light — restore a forgotten world, one lantern at a time." />
+    <title>The Last Light</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">✦</span><div><strong>THE LAST LIGHT</strong><small>FIELD JOURNAL · DAY <span id="day">01</span></small></div></div>
+        <button class="icon-button" id="soundBtn" aria-label="Toggle sound">♫</button>
+      </header>
+      <main>
+        <section class="world-head">
+          <div><p class="eyebrow">THE FORGOTTEN VALE</p><h1>A little light<br/><em>against the dark.</em></h1></div>
+          <div class="weather"><span class="sun">☼</span><span>GOLDEN HOUR</span><small>THE NIGHT IS COMING</small></div>
+        </section>
+        <section class="resource-strip" aria-label="Resources">
+          <div class="resource"><span class="res-icon wood">▰</span><div><b id="wood">12</b><small>WOOD</small></div></div>
+          <div class="resource"><span class="res-icon food">✿</span><div><b id="food">8</b><small>PROVISIONS</small></div></div>
+          <div class="resource"><span class="res-icon glow">✧</span><div><b id="light">3</b><small>LIGHT</small></div></div>
+          <div class="resource"><span class="res-icon hope">♡</span><div><b id="hope">1</b><small>HOPE</small></div></div>
+        </section>
+        <section class="scene-card">
+          <div class="scene-label"><span>YOUR SANCTUARY</span><span class="live-dot"></span><span id="phase">DUSK · SAFE</span></div>
+          <div id="game-canvas" role="img" aria-label="Illustrated forest sanctuary. Tap glowing points to explore."></div>
+          <div class="scene-caption"><span id="scene-title">THE OLD CLEARING</span><span id="scene-subtitle">A place to begin again</span></div>
+        </section>
+        <section class="action-panel">
+          <div class="section-title"><div><p class="eyebrow">YOUR NEXT STEP</p><h2 id="task-title">Gather what the forest gives</h2></div><span class="step-count" id="step-count">01 / 04</span></div>
+          <p class="task-copy" id="task-copy">The old paths are quiet. Search the clearing for fallen branches and wild provisions.</p>
+          <div class="action-grid" id="actions">
+            <button class="action-card" data-action="wood"><span class="action-art wood-art">⌁</span><b>Gather wood</b><small>+3 wood</small></button>
+            <button class="action-card" data-action="food"><span class="action-art food-art">✿</span><b>Forage berries</b><small>+2 provisions</small></button>
+            <button class="action-card" data-action="build"><span class="action-art build-art">⌂</span><b>Repair shelter</b><small>Cost: 6 wood</small></button>
+            <button class="action-card" data-action="light"><span class="action-art light-art">✧</span><b>Kindle beacon</b><small>Cost: 2 wood</small></button>
+          </div>
+          <div class="notice" id="notice"><span>✦</span><p>Every small act makes the valley a little safer. Your choices shape what comes next.</p></div>
+        </section>
+        <section class="journey-panel">
+          <div class="section-title"><div><p class="eyebrow">THE LONG ROAD</p><h2>Beyond the clearing</h2></div><span class="locked-tag">CHAPTER I</span></div>
+          <div class="journey-row"><div class="journey-thumb forest-thumb">✧</div><div class="journey-text"><b>The Whispering Wood</b><small>Find the lost trail · Explore after lighting the beacon</small></div><span class="lock">⌑</span></div>
+          <div class="journey-row muted-row"><div class="journey-thumb ruin-thumb">⌂</div><div class="journey-text"><b>The Sunken Watchtower</b><small>Something old is waiting beneath the moss</small></div><span class="lock">⌑</span></div>
+        </section>
+      </main>
+      <nav class="bottom-nav"><button class="nav-item active"><span>⌂</span><small>HOME</small></button><button class="nav-item" id="mapNav"><span>⌖</span><small>WORLD</small></button><button class="nav-item" id="journalNav"><span>▤</span><small>JOURNAL</small></button><button class="nav-item" id="peopleNav"><span>♧</span><small>PEOPLE</small></button></nav>
+      <div class="toast" id="toast" aria-live="polite"></div>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
